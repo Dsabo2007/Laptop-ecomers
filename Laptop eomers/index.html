@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EOMERS — Laptops Engineered for More</title>
+  <meta name="description" content="EOMERS — premium laptops for creators, gamers and professionals. Frontend demo store." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===================== PRELOADER ===================== -->
+  <div class="preloader" id="preloader">
+    <div class="preloader__inner">
+      <div class="preloader__logo">EOMERS<span class="dot">.</span></div>
+      <div class="preloader__bar"><span id="preloaderFill"></span></div>
+      <div class="preloader__pct" id="preloaderPct">0%</div>
+    </div>
+  </div>
+
+  <!-- ===================== CURSOR ===================== -->
+  <div class="cursor" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ===================== SCROLL PROGRESS ===================== -->
+  <div class="scroll-progress"><span id="scrollProgress"></span></div>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#top" class="logo" data-cursor="hover">EOMERS<span class="dot">.</span></a>
+
+      <nav class="nav" id="nav">
+        <a href="#products" class="nav__link" data-cursor="hover"><span>Shop</span></a>
+        <a href="#features" class="nav__link" data-cursor="hover"><span>Why Us</span></a>
+        <a href="#showcase" class="nav__link" data-cursor="hover"><span>Showcase</span></a>
+        <a href="#reviews" class="nav__link" data-cursor="hover"><span>Reviews</span></a>
+        <a href="#contact" class="nav__link" data-cursor="hover"><span>Contact</span></a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="icon-btn" id="cartBtn" data-cursor="hover" aria-label="Open cart">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6h15l-1.5 9h-12z"/><path d="M6 6L5 3H2"/><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="burger" id="burger" data-cursor="hover" aria-label="Menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== MOBILE MENU ===================== -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu__links">
+      <a href="#products" class="mobile-menu__link">Shop</a>
+      <a href="#features" class="mobile-menu__link">Why Us</a>
+      <a href="#showcase" class="mobile-menu__link">Showcase</a>
+      <a href="#reviews" class="mobile-menu__link">Reviews</a>
+      <a href="#contact" class="mobile-menu__link">Contact</a>
+    </div>
+    <div class="mobile-menu__foot">Laptops engineered for more.</div>
+  </div>
+
+  <main id="top">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <div class="hero__bg">
+        <span class="blob blob--1"></span>
+        <span class="blob blob--2"></span>
+        <div class="hero__grid"></div>
+      </div>
+
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <div class="hero__badge reveal" data-reveal>
+            <span class="pulse"></span> New · EOMERS Flux Series 2026
+          </div>
+
+          <h1 class="hero__title">
+            <span class="line"><span class="line__inner">Laptops</span></span>
+            <span class="line"><span class="line__inner">engineered</span></span>
+            <span class="line"><span class="line__inner">for <em>more</em><span class="dot">.</span></span></span>
+          </h1>
+
+          <p class="hero__sub reveal" data-reveal>
+            Precision-built machines for creators, gamers and professionals.
+            Featherlight frames, studio-grade displays, all-day batteries.
+          </p>
+
+          <div class="hero__cta reveal" data-reveal>
+            <a href="#products" class="btn btn--primary" data-cursor="hover">
+              <span>Shop the range</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="#showcase" class="btn btn--ghost" data-cursor="hover"><span>Watch the tour</span></a>
+          </div>
+
+          <div class="hero__stats reveal" data-reveal>
+            <div class="hero__stat"><strong data-count="48">0</strong><span>hrs battery</span></div>
+            <div class="hero__stat"><strong data-count="120">0</strong><span>Hz mini-LED</span></div>
+            <div class="hero__stat"><strong data-count="99">0</strong><span>% positive reviews</span></div>
+          </div>
+        </div>
+
+        <div class="hero__visual" id="heroVisual">
+          <div class="hero__glow"></div>
+          <div class="hero__laptop" id="heroLaptop">
+            <img src="assets/photos/hero.jpg" alt="EOMERS laptop glowing in violet and blue light" class="hero__photo" fetchpriority="high" />
+            <span class="hero__frame-glow" aria-hidden="true"></span>
+          </div>
+          <div class="hero__chip hero__chip--1 float">
+            <strong>2.9 kg</strong><span>ultralight build</span>
+          </div>
+          <div class="hero__chip hero__chip--2 float float--delay">
+            <strong>Thunderbolt 5</strong><span>one-cable dock</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="#products" class="hero__scroll" data-cursor="hover" aria-label="Scroll down">
+        <span class="hero__scroll-track"><span class="hero__scroll-thumb"></span></span>
+        scroll
+      </a>
+    </section>
+
+    <!-- ===================== MARQUEE ===================== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>MacBook-class power</span><i>✦</i><span>RTX-ready gaming</span><i>✦</i><span>OLED displays</span><i>✦</i>
+        <span>48h battery</span><i>✦</i><span>Carbon-neutral shipping</span><i>✦</i><span>2-year warranty</span><i>✦</i>
+        <span>MacBook-class power</span><i>✦</i><span>RTX-ready gaming</span><i>✦</i><span>OLED displays</span><i>✦</i>
+        <span>48h battery</span><i>✦</i><span>Carbon-neutral shipping</span><i>✦</i><span>2-year warranty</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- ===================== PRODUCTS ===================== -->
+    <section class="section products" id="products">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="eyebrow reveal" data-reveal>01 — The Line-up</span>
+            <h2 class="section__title reveal" data-reveal>Pick your <em>weapon</em>.</h2>
+          </div>
+          <p class="section__lead reveal" data-reveal>Every EOMERS laptop is tuned in-house: calibrated screens, silent cooling, keyboards you'll actually enjoy typing on.</p>
+        </div>
+
+        <div class="filters reveal" data-reveal id="filters">
+          <button class="filter is-active" data-filter="all" data-cursor="hover">All</button>
+          <button class="filter" data-filter="ultrabook" data-cursor="hover">Ultrabooks</button>
+          <button class="filter" data-filter="gaming" data-cursor="hover">Gaming</button>
+          <button class="filter" data-filter="creator" data-cursor="hover">Creators</button>
+          <button class="filter" data-filter="business" data-cursor="hover">Business</button>
+          <button class="filter" data-filter="student" data-cursor="hover">Student</button>
+        </div>
+
+        <div class="product-grid" id="productGrid"><!-- rendered by JS --></div>
+      </div>
+    </section>
+
+    <!-- ===================== FEATURES ===================== -->
+    <section class="section features" id="features">
+      <div class="container">
+        <div class="section__head section__head--center">
+          <span class="eyebrow reveal" data-reveal>02 — Why EOMERS</span>
+          <h2 class="section__title reveal" data-reveal>Built different<em>.</em></h2>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature reveal" data-reveal data-tilt>
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg>
+            </div>
+            <h3>Blazing performance</h3>
+            <p>Next-gen silicon with a dual-mode fan curve — full power when you need it, near-silent when you don't.</p>
+            <span class="feature__num">01</span>
+          </article>
+
+          <article class="feature reveal" data-reveal data-tilt>
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </div>
+            <h3>Calibrated displays</h3>
+            <p>120 Hz mini-LED and OLED panels, factory-calibrated to Delta-E &lt; 1. True colour, zero compromise.</p>
+            <span class="feature__num">02</span>
+          </article>
+
+          <article class="feature reveal" data-reveal data-tilt>
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg>
+            </div>
+            <h3>All-day battery</h3>
+            <p>Up to 48 hours of real-world use, and a 30-minute charge that buys you another 6 hours.</p>
+            <span class="feature__num">03</span>
+          </article>
+
+          <article class="feature reveal" data-reveal data-tilt>
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.4 8.3-8 9-4.6-.7-8-4-8-9V6z"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <h3>2-year cover</h3>
+            <p>Accidental damage protection, next-day replacement and lifetime software support included.</p>
+            <span class="feature__num">04</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SHOWCASE ===================== -->
+    <section class="section showcase" id="showcase">
+      <div class="container showcase__inner">
+        <div class="showcase__text">
+          <span class="eyebrow reveal" data-reveal>03 — The Difference</span>
+          <h2 class="section__title reveal" data-reveal>Every detail,<br/><em>obsessed over</em>.</h2>
+          <ul class="showcase__list">
+            <li class="reveal" data-reveal><span>01</span>CNC-milled aluminium chassis, 11 mm at its thinnest edge.</li>
+            <li class="reveal" data-reveal><span>02</span>Keyboard with 1.5 mm travel and per-key soft-glow backlight.</li>
+            <li class="reveal" data-reveal><span>03</span>Quad-speaker array tuned by studio engineers.</li>
+            <li class="reveal" data-reveal><span>04</span>Recycled materials — 68% of the build is reclaimed.</li>
+          </ul>
+          <a href="#products" class="btn btn--primary reveal" data-reveal data-cursor="hover"><span>Find your model</span></a>
+        </div>
+
+        <div class="showcase__visual reveal" data-reveal>
+          <div class="showcase__frame" data-parallax="0.06">
+            <img src="assets/photos/showcase.jpg" alt="EOMERS laptop on a desk outdoors" class="showcase__photo" loading="lazy" />
+            <div class="showcase__badge float">Delta-E &lt; 1</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container stats">
+        <div class="stat reveal" data-reveal><strong data-count="126">0</strong><span>countries served</span></div>
+        <div class="stat reveal" data-reveal><strong data-count="340">0</strong><span>service centres</span></div>
+        <div class="stat reveal" data-reveal><strong data-count="98">0</strong><span>% would recommend</span></div>
+        <div class="stat reveal" data-reveal><strong data-count="12">0</strong><span>years of craft</span></div>
+      </div>
+    </section>
+
+    <!-- ===================== REVIEWS ===================== -->
+    <section class="section reviews" id="reviews">
+      <div class="container">
+        <div class="section__head section__head--center">
+          <span class="eyebrow reveal" data-reveal>04 — Word of mouth</span>
+          <h2 class="section__title reveal" data-reveal>Loved by <em>builders</em>.</h2>
+        </div>
+
+        <div class="slider reveal" data-reveal id="slider">
+          <div class="slider__viewport">
+            <div class="slider__track" id="sliderTrack">
+              <figure class="slide">
+                <blockquote>“I've tested dozens of ultrabooks for our studio. The EOMERS Flux is the first one where I stopped thinking about the machine entirely — it just gets out of the way.”</blockquote>
+                <figcaption><span class="avatar">AM</span><div><strong>Amara Mensah</strong><span>Motion designer · Lagos</span></div></figcaption>
+              </figure>
+              <figure class="slide">
+                <blockquote>“Six hours of Blender rendering and the fans barely whispered. The colour accuracy out of the box is better than the calibration I used to pay for.”</blockquote>
+                <figcaption><span class="avatar">JK</span><div><strong>Jonas Keller</strong><span>3D artist · Berlin</span></div></figcaption>
+              </figure>
+              <figure class="slide">
+                <blockquote>“Bought the gaming model on a whim. Now half my team has one. The 120 Hz panel ruins every other screen for me — including my desktop setup.”</blockquote>
+                <figcaption><span class="avatar">RS</span><div><strong>Riya Sharma</strong><span>Game developer · Pune</span></div></figcaption>
+              </figure>
+              <figure class="slide">
+                <blockquote>“Support replaced my unit in 26 hours, no questions asked. That's the part nobody advertises — and honestly the part that matters most.”</blockquote>
+                <figcaption><span class="avatar">TC</span><div><strong>Tomás Castro</strong><span>Photographer · Madrid</span></div></figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="slider__nav">
+            <button class="slider__arrow" id="prevSlide" data-cursor="hover" aria-label="Previous">←</button>
+            <div class="slider__dots" id="sliderDots"></div>
+            <button class="slider__arrow" id="nextSlide" data-cursor="hover" aria-label="Next">→</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== NEWSLETTER ===================== -->
+    <section class="section newsletter" id="contact">
+      <div class="container">
+        <div class="newsletter__card reveal" data-reveal>
+          <div class="newsletter__glow"></div>
+          <span class="eyebrow">05 — Stay close</span>
+          <h2 class="section__title">Get the drop <em>first</em>.</h2>
+          <p>Launches, restocks and members-only pricing. One email a month, zero noise.</p>
+          <form class="newsletter__form" id="newsletterForm">
+            <input type="email" placeholder="you@domain.com" required aria-label="Email address"/>
+            <button class="btn btn--primary" type="submit" data-cursor="hover"><span>Subscribe</span></button>
+          </form>
+          <div class="newsletter__note" id="newsletterNote"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#top" class="logo" data-cursor="hover">EOMERS<span class="dot">.</span></a>
+        <p>Laptops engineered for more. Designed in Lisbon, assembled with care.</p>
+        <div class="footer__socials">
+          <a href="#" data-cursor="hover" aria-label="X">X</a>
+          <a href="#" data-cursor="hover" aria-label="Instagram">IG</a>
+          <a href="#" data-cursor="hover" aria-label="YouTube">YT</a>
+          <a href="#" data-cursor="hover" aria-label="GitHub">GH</a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Shop</h4>
+        <a href="#products" data-cursor="hover">Ultrabooks</a>
+        <a href="#products" data-cursor="hover">Gaming</a>
+        <a href="#products" data-cursor="hover">Creators</a>
+        <a href="#products" data-cursor="hover">Accessories</a>
+      </div>
+      <div class="footer__col">
+        <h4>Support</h4>
+        <a href="#" data-cursor="hover">Warranty</a>
+        <a href="#" data-cursor="hover">Repairs</a>
+        <a href="#" data-cursor="hover">Track order</a>
+        <a href="#" data-cursor="hover">Contact</a>
+      </div>
+      <div class="footer__col">
+        <h4>Company</h4>
+        <a href="#" data-cursor="hover">About</a>
+        <a href="#" data-cursor="hover">Sustainability</a>
+        <a href="#" data-cursor="hover">Careers</a>
+        <a href="#" data-cursor="hover">Press</a>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© 2026 EOMERS. Frontend demo — no real transactions.</span>
+      <span>Privacy · Terms · Cookies</span>
+    </div>
+    <div class="footer__giant" aria-hidden="true">EOMERS</div>
+  </footer>
+
+  <!-- ===================== CART DRAWER ===================== -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart" id="cart" aria-label="Shopping cart">
+    <div class="cart__head">
+      <h3>Your bag <span id="cartHeadCount">(0)</span></h3>
+      <button class="icon-btn" id="cartClose" data-cursor="hover" aria-label="Close cart">✕</button>
+    </div>
+    <div class="cart__items" id="cartItems">
+      <div class="cart__empty" id="cartEmpty">
+        <svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6h15l-1.5 9h-12z"/><path d="M6 6L5 3H2"/><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/></svg>
+        <p>Your bag is empty.</p>
+        <a href="#products" class="btn btn--ghost" id="cartShopBtn" data-cursor="hover"><span>Browse laptops</span></a>
+      </div>
+    </div>
+    <div class="cart__foot">
+      <div class="cart__row"><span>Subtotal</span><strong id="cartSubtotal">$0</strong></div>
+      <div class="cart__row cart__row--muted"><span>Shipping</span><span>Free, 2–4 days</span></div>
+      <button class="btn btn--primary btn--block" id="checkoutBtn" data-cursor="hover"><span>Checkout</span></button>
+      <p class="cart__note">Demo store — checkout is simulated.</p>
+    </div>
+  </aside>
+
+  <!-- ===================== TOASTS ===================== -->
+  <div class="toasts" id="toasts"></div>
+
+  <!-- ===================== BACK TO TOP ===================== -->
+  <button class="to-top" id="toTop" data-cursor="hover" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
